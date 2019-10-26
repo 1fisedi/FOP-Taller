@@ -1,11 +1,13 @@
 SPL TiendaVirtual {
 
 	Features = {AdminCategorias, AgregarCategoria, ModificarCategoria, EliminarCategoria, 
-		Categoria, CategoriaDAO, Conexion, ConexionAntigua, Config, ConfigAntigua
+		Categoria, CategoriaDAO, Conexion, ConexionAntigua, Config, ConfigAntigua, 
+		ListarCategorias, ConexionNueva, ConfigNueva
 	}
 
 	Deltas = {dAdminCategorias, dAgregarCategoria, dModificarCategoria, dEliminarCategoria, 
-		dCategoria, dCategoriaDAO, dConexion, dConexionAntigua, dConfig, dConfigAntigua
+		dCategoria, dCategoriaDAO, dConexion, dConexionAntigua, dConfig, dConfigAntigua,
+		dListarCategorias, dConexionNueva, dConfigNueva
 	}
 
 	Constraints {
@@ -22,10 +24,14 @@ SPL TiendaVirtual {
 		{dConexion}when(Conexion);
 		{dConexionAntigua}when(ConexionAntigua);
 		{dConfig}when(Config);
-		{dConfigAntigua}when(ConfigAntigua); 
+		{dConfigAntigua}when(ConfigAntigua);
+		{dListarCategorias}when(ListarCategorias); 
+		{dConexionNueva}when(ConexionNueva);
+		{dConfigNueva}when(ConfigNueva);
 	}
 
 	Products {
-		// Put product definitions here. 
+		// Put product definitions here.
+		tienda_minima_v11 = {AgregarCategoria, ModificarCategoria, EliminarCategoria, Categoria, Conexion, Config}; 
 	}
 }

@@ -1,0 +1,17 @@
+delta dConexionNueva {
+	adds{
+		package org.pl.eshopping.bd;
+		import java.sql.*;
+		class MysqlCon{
+			public static Connection getConexion() throws SQLException{
+				try{
+					Class.forName("com.mysql.jdbc.Driver");  
+					Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/sonoo","root","");
+				}catch(Exception e){
+					e.printStackTrace();
+				}
+			}
+		}
+	}
+}
+

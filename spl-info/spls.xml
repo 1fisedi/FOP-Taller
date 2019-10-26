@@ -12,6 +12,9 @@
 			<feature name ="ConexionAntigua" />
 			<feature name ="Config" />
 			<feature name ="ConfigAntigua" />
+			<feature name ="ListarCategorias" />
+			<feature name ="ConexionNueva" />
+			<feature name ="ConfigNueva" />
 		</features>
 		<configurations>
 		</configurations>
@@ -66,6 +69,18 @@
 			</partition>
 			<partition>
 				<modul delta="dConfigAntigua" when="ConfigAntigua
+				" />
+			</partition>
+			<partition>
+				<modul delta="dListarCategorias" when="ListarCategorias
+				" />
+			</partition>
+			<partition>
+				<modul delta="dConexionNueva" when="ConexionNueva
+				" />
+			</partition>
+			<partition>
+				<modul delta="dConfigNueva" when="ConfigNueva
 				" />
 			</partition>
 		</deltas>
